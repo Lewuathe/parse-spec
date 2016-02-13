@@ -1,4 +1,4 @@
-parse-spec
+parse-spec [![npm version](https://badge.fury.io/js/parse-spec.svg)](https://badge.fury.io/js/parse-spec)
 ========
 
 Testing framework for Parse.com API migration
