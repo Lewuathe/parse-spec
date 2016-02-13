@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "babel-runtime": "^6.5.0",
+    "colors": "^1.1.2",
     "curl-trace-parser": "0.0.8",
     "gavel": "0.5.2",
     "loading-indicator": "2.0.0",
