@@ -25,7 +25,9 @@
     "babel-register": "^6.5.1"
   },
   "scripts" : {
-    "build": "./node_modules/.bin/babel src/ -d lib/"
+    "build": "./node_modules/.bin/babel src/ -d lib/",
+    "trace": "node ./lib/trace.js",
+    "verify": "node ./lib/spec.js"
   },
   "keywords": [
     "Parse.com"
