@@ -3,10 +3,17 @@ parse-spec
 
 Testing framework for Parse.com API migration
 
-# Build
+# How to install
 
-```js
-$ npm run build
+```
+$ npm install -g parse-spec
+```
+
+# How to use
+
+```
+$ parse-spec -c /path/to/api.json -b /path/to/build_dir trace
+$ parse-spec -c /path/to/api.json -b /path/to/build_dir verify
 ```
 
 # Configuration
@@ -27,7 +34,13 @@ Write below information into `config/api.json`
 }
 ```
 
-# Usage
+# Build
+
+```js
+$ npm run build
+```
+
+# Usage for dev
 
 First trace Parse.com API and migrated API.
 
