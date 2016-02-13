@@ -6,8 +6,13 @@
   "scripts": {
     "build": "./node_modules/.bin/babel src/ -d lib/",
     "trace": "node ./lib/trace.js",
-    "verify": "node ./lib/spec.js"
+    "verify": "node ./lib/spec.js",
+    "prepublish": "npm run build"
   },
+  "bin": {
+    "parse-spec-trace": "node ./lib/trace.js",
+    "parse-spec-verify": "node ./lib/spec.js"
+  }
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Lewuathe/parse-blueprint.git"
