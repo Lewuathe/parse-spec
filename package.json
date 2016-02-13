@@ -10,7 +10,7 @@
     "prepublish": "npm run build"
   },
   "bin": {
-    "parse-spec": "./bin/parse-spec",
+    "parse-spec": "./bin/parse-spec"
   },
   "repository": {
     "type": "git",
