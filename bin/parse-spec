@@ -38,11 +38,11 @@ do
 done
 
 trace_api() {
-  node $DIR/../lib/trace.js $CONFIG_FILE
+  node $DIR/lib/trace.js $CONFIG_FILE
 }
 
 verify_api() {
-  node $DIR/../lib/verify.js $CONFIG_FILE
+  node $DIR/lib/verify.js $CONFIG_FILE
 }
 
 case $1 in
