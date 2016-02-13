@@ -4,7 +4,7 @@ import rimraf from 'rimraf';
 import logger from './logger';
 import ProgressBar from 'progress';
 
-let config = require('../config/api.json');
+let config = require(process.argv[2]);
 let appName = config['app_name'];
 let appId = config['app_id'];
 let restApiKey = config['restapi_key'];

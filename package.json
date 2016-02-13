@@ -1,6 +1,6 @@
 {
   "name": "parse-spec",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Testting framework for Parse API migration",
   "main": "index.js",
   "scripts": {
