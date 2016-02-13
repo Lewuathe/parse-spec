@@ -9,6 +9,7 @@ print_usage() {
   echo "  verify : Verify Migrated APIs"
   echo "  Options:"
   echo "    -c <Config JSON>"
+  echo "    -b <Build Dir>"
 }
 
 if [ $# -eq 0 ]; then
@@ -16,6 +17,7 @@ if [ $# -eq 0 ]; then
 fi
 
 CONFIG_FILE=./config/api.json
+BUILD_DIR=./build/
 
 for OPT in "$@"
 do
@@ -28,6 +30,10 @@ do
             CONFIG_FILE="$2"
             shift 2
             ;;
+        '-b'|'--build' )
+            BUILD_DIR=$2
+            shift 2
+            ;;
         -*)
             echo "$PROGNAME: illegal option -- '$(echo $1 | sed 's/^-*//')'" 1>&2
             exit 1
@@ -38,11 +44,15 @@ do
 done
 
 trace_api() {
-  node $DIR/lib/trace.js $CONFIG_FILE
+  rm -rf $BUILD_DIR
+  mkdir -p $BUILD_DIR
+  NODE_HOME=`which node`/../../lib/node_modules
+  `which node` $NODE_HOME/parse-spec/lib/trace.js $CONFIG_FILE $BUILD_DIR
 }
 
 verify_api() {
-  node $DIR/lib/verify.js $CONFIG_FILE
+  NODE_HOME=`which node`/../../lib/node_modules
+  `which node` $NODE_HOME/parse-spec/lib/verify.js $CONFIG_FILE $BUILD_DIR
 }
 
 case $1 in
