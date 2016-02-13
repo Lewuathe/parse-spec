@@ -3,3 +3,4 @@ node_modules
 build
 trace.log
 lib
+config/api.json
