@@ -1,0 +1,39 @@
+{
+  "name": "parse-spec",
+  "version": "0.0.1",
+  "description": "Testting framework for Parse API migration",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lewuathe/parse-blueprint.git"
+  },
+  "dependencies": {
+    "curl-trace-parser": "0.0.8",
+    "gavel": "0.5.2",
+    "winston": "2.1.1",
+    "loading-indicator": "2.0.0",
+    "babel-runtime": "^6.5.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.5.1",
+    "babel-core": "^6.5.1",
+    "babel-istanbul": "^0.6.0",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-register": "^6.5.1"
+  },
+  "scripts" : {
+    "build": "./node_modules/.bin/babel src/ -d lib/"
+  },
+  "keywords": [
+    "Parse.com"
+  ],
+  "author": "Kai Sasaki",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Lewuathe/parse-blueprint/issues"
+  },
+  "homepage": "https://github.com/Lewuathe/parse-blueprint#readme"
+}

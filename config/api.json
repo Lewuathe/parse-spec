@@ -1,0 +1,12 @@
+{
+  "app_name": "hackday2016",
+  "endpoint": "http://localhost:1337/",
+  "parse_endpoint": "https://api.parse.com/1/",
+  "app_id": "nzTARk2vgXuUwzhrWH8uGuhP8732PXZcBbW0UObv",
+  "restapi_key": "karWDHBxxkHI2o3tGRRuHAZ8VE5zG6CN7WUweIdJ",
+  "master_key": "sgfBo2wCVcVf40lzXN0wR6vHsZ5nSMVBavENGKNL",
+  "classes": [
+    "Group",
+    "Artist"
+  ]
+}
