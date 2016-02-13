@@ -3,7 +3,7 @@ import assert from 'assert';
 import colors from 'colors';
 import logger from './logger';
 
-var config = require('../config/api.json');
+let config = require('../config/api.json');
 
 import { AssertClass } from './AssertClass.js';
 

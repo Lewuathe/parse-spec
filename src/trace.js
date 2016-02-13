@@ -4,17 +4,17 @@ import rimraf from 'rimraf';
 import logger from './logger';
 import ProgressBar from 'progress';
 
-var config = require('../config/api.json');
-var appName = config['app_name'];
-var appId = config['app_id'];
-var restApiKey = config['restapi_key'];
-var masterKey = config['master_key'];
-var classes = config['classes'];
+let config = require('../config/api.json');
+let appName = config['app_name'];
+let appId = config['app_id'];
+let restApiKey = config['restapi_key'];
+let masterKey = config['master_key'];
+let classes = config['classes'];
 
 rimraf.sync('./build/' + appName, {});
 fs.mkdirSync('./build/' + appName);
 
-var bar = new ProgressBar('  Tracing [:bar] :percent :etas', {
+let bar = new ProgressBar('  Tracing [:bar] :percent :etas', {
     complete: '=',
     incomplete: ' ',
     width: 40,
