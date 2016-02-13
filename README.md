@@ -41,5 +41,7 @@ Next verify API by comparing trace files.
 $ npm run verify
 ```
 
+LICENSE
 
+[MIT License](https://opensource.org/licenses/MIT)
 

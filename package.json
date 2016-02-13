@@ -12,10 +12,10 @@
   "bin": {
     "parse-spec-trace": "node ./lib/trace.js",
     "parse-spec-verify": "node ./lib/spec.js"
-  }
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Lewuathe/parse-blueprint.git"
+    "url": "git+https://github.com/Lewuathe/parse-spec.git"
   },
   "dependencies": {
     "babel-runtime": "^6.5.0",
@@ -41,7 +41,7 @@
   "author": "Kai Sasaki",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Lewuathe/parse-blueprint/issues"
+    "url": "https://github.com/Lewuathe/parse-spec/issues"
   },
-  "homepage": "https://github.com/Lewuathe/parse-blueprint#readme"
+  "homepage": "https://github.com/Lewuathe/parse-spec"
 }
