@@ -19,5 +19,5 @@ for (let klass of classes) {
     for (var i = 0; i < local.results.length; i++) {
         AssertClass.verify(local.results[i], parse.results[i]);
     }
-    console.log('OK: '.green + klass.underline);
+    console.log('  OK: '.green + klass.underline + ', size=' + local.results.length);
 }

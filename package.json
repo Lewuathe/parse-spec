@@ -1,7 +1,7 @@
 {
   "name": "parse-spec",
-  "version": "0.1.0",
-  "description": "Testting framework for Parse API migration",
+  "version": "0.1.1",
+  "description": "Testing framework for Parse API migration",
   "main": "index.js",
   "scripts": {
     "build": "./node_modules/.bin/babel src/ -d lib/",

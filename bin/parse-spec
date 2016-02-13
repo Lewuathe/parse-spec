@@ -1,7 +1,12 @@
 #!/usr/bin/env bash
 
-PROGNAME=$(basename $0)
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+SCRIPT_HOME=$0
+
+if [ -n "`readlink $SCRIPT_HOME`" ] ; then
+    SCRIPT_HOME="`readlink $SCRIPT_HOME`"
+fi
+
+SCRIPT_HOME="`dirname $SCRIPT_HOME`"
 
 print_usage() {
   echo "Usage: $0"
@@ -46,13 +51,15 @@ done
 trace_api() {
   rm -rf $BUILD_DIR
   mkdir -p $BUILD_DIR
-  NODE_HOME=`which node`/../../lib/node_modules
-  `which node` $NODE_HOME/parse-spec/lib/trace.js $CONFIG_FILE $BUILD_DIR
+  CONFIG_FILE=$(cd $(dirname $CONFIG_FILE) && pwd)/$(basename $CONFIG_FILE)
+  BUILD_DIR=$(cd $(dirname $BUILD_DIR) && pwd)/$(basename $BUILD_DIR)
+  `which node` $SCRIPT_HOME/../lib/trace.js $CONFIG_FILE $BUILD_DIR
 }
 
 verify_api() {
-  NODE_HOME=`which node`/../../lib/node_modules
-  `which node` $NODE_HOME/parse-spec/lib/verify.js $CONFIG_FILE $BUILD_DIR
+  CONFIG_FILE=$(cd $(dirname $CONFIG_FILE) && pwd)/$(basename $CONFIG_FILE)
+  BUILD_DIR=$(cd $(dirname $BUILD_DIR) && pwd)/$(basename $BUILD_DIR)
+  `which node` $SCRIPT_HOME/../lib/verify.js $CONFIG_FILE $BUILD_DIR
 }
 
 case $1 in
